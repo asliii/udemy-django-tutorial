@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+
+{% extends "basicap/base.html" %}
+<div class="container">
+
+    {% block body_block %}
+    <h1>Welcome to index</h1>
+    {{text|upper}}
+    {{istenmeyen|cut:'kes'}}
+    {% endblock %}
+</div>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Aslılılılı</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="{% url 'index'%}">Home</a></li>
+        <li><a href="{% url 'basicap:other'%}">Other</a></li>
+          <li><a href="{% url 'admin:index'%}">Admin</a></li>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+{% block body_block %}
+{% endblock %}
+<footer style="background-color:#f8f8f8">
+<p class="container">Tags:
+    <a href="#"><span class="label label-info">Snipp</span></a>
+	<a href="#"><span class="label label-info">Bootstrap</span></a>
+	<a href="#"><span class="label label-info">UI</span></a>
+	<a href="#"><span class="label label-info">growth</span></a>
+	| <i class="icon-user"></i> <a href="#">Admin</a>
+	| <i class="icon-calendar"></i> Sept 16th, 2012 at 4:20 pm
+ 	| <i class="icon-comment"></i> <a href="#">3 Comments</a>
+   	| <i class="icon-share"></i> <a href="#">39 Shares</a>
+</p>
+</footer>
+</body>
+</html>
