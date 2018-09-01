@@ -3,22 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Users</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
 
-{% if users %}
-<ol>
-    <li>{% for user in users %}
-    <li>Users Info : </li>
-        <ul>
-            <li>First Name : {{user.first_name}}</li>
-            <li>Last Name : {{user.last_name}}</li>
-            <li>Email : {{user.email}}</li>
+<div class="container">
+    <h4>Kayıt Formu</h4>
+    <form method="post">{% csrf_token %}
+        {{ form.as_p }}
 
-        </ul>{% endfor %}
-    </li>
-</ol>
+        <button type="submit" class="btn btn-primary">Kaydol</button>
+    </form>
+</div>
 
-{% endif %}
 </body>
 </html>

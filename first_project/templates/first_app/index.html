@@ -10,7 +10,26 @@
 <h1>Hello this is index page</h1>
 
 {{insert_me}}
-<img src="{% static 'images/guitar.jpg'%}" alt="example">
+<!--<img src="{% static 'images/guitar.jpg'%}" alt="example">-->
+
+<div class="djangotwo">
+    {%if acc_rec %}
+    <table>
+        <thead>
+         <th>Site Name</th>
+         <th>Date Accessed</th>
+        </thead>
+        <tbody>
+        {%for acc in acc_rec%}
+        <tr><td>{{acc.name}}</td>
+        <td>{{acc.date}}</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <p>Access Records is not found!</p>
+    {% endif %}
+</div>
 
 
 </body>
